@@ -30,8 +30,8 @@ Output::Output()
 	//Change the title
 	pWind->ChangeTitle("Paint for Kids - Programming Techniques Project");
 	
-	//CreateDrawToolBar();
-	CreatePlayToolBar();
+	CreateDrawToolBar();
+	//CreatePlayToolBar();
 	CreateStatusBar();
 }
 
@@ -85,7 +85,7 @@ void Output::CreateDrawToolBar() const
 	MenuItemImages[ITM_RECT] = "images\\MenuItems\\MENU_RECT.jpg";
 	MenuItemImages[ITM_SQUARE] = "images\\MenuItems\\MENU_SQUARE.jpg";
 	MenuItemImages[ITM_TRI] = "images\\MenuItems\\MENU_TRI.jpg";
-	MenuItemImages[ITM_HEX] = "images\\MenuItems\\MENU_HEX (1).jpg";
+	MenuItemImages[ITM_HEX] = "images\\MenuItems\\MENU_HEX.jpg";
 	MenuItemImages[ITM_CIRCLE] = "images\\MenuItems\\MENU_CIRCLE.jpg";
 	MenuItemImages[ITM_SELECT] = "images\\MenuItems\\MENU_SELECT.jpg";
 	MenuItemImages[ITM_DRW_CLR] = "images\\MenuItems\\MENU_DRW_CLR.jpg";
