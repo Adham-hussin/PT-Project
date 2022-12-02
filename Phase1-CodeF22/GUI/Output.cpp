@@ -30,8 +30,8 @@ Output::Output()
 	//Change the title
 	pWind->ChangeTitle("Paint for Kids - Programming Techniques Project");
 	
-	CreateDrawToolBar();
-	//CreatePlayToolBar();
+	//CreateDrawToolBar();
+	CreatePlayToolBar();
 	CreateStatusBar();
 }
 
@@ -137,7 +137,7 @@ void Output::CreatePlayToolBar() const
 	MenuItemImages[ITM_DRAW_MODE] = "images\\MenuItems\\MENU_DRAW.jpg";
 	MenuItemImages[ITM_EXIT_PLAY] = "images\\MenuItems\\Menu_Exit.jpg";
 	for(int i=0; i<PLAY_ITM_COUNT; i++)
-		pWind->DrawImage(MenuItemImages[i], i*UI.MenuItemWidth/2+20*i, 0, UI.MenuItemWidth/2, UI.ToolBarHeight);
+		pWind->DrawImage(MenuItemImages[i], i*UI.MenuItemWidth, 0, UI.MenuItemWidth, UI.ToolBarHeight);
 
 	pWind->SetPen(ORANGE, 3);
 	pWind->DrawLine(0, UI.ToolBarHeight+1, UI.width, UI.ToolBarHeight+1);
