@@ -25,13 +25,13 @@ int main()
 	pOut->PrintMessage("TEST1: Drawing Tool bar and Status bar, Click anywhere to continue");
 	pIn->GetPointClicked(x,y);	//Wait for any click
 
-	
+
 	///////////////////////////////////////////////////////////////////////////////////
 	// TEST 2:	
 	//			Drawing all the Figures with all possible states: 
 	//			Non-filled, Filled, and highlighted in both cases			
 	///////////////////////////////////////////////////////////////////////////////////
-	
+
 	pOut->PrintMessage("TEST2: Now we will show that Output class can draw any figure in any state, Click anywhere to continue");
 	pIn->GetPointClicked(x,y);	//Wait for any click
 
@@ -42,7 +42,7 @@ int main()
 	/// =================== 
 	pOut->PrintMessage("Drawing a Rectangle, filled/non-filled and Highlighted filled/non-filled,  Click to continue");
 	pIn->GetPointClicked(x,y);	//Wait for any click
-	
+
 	// 2.1.1 - Drawing non-filled rectangle
 	pOut->PrintMessage("Drawing a Rectangle ==> non-filled,  Click two points");
 	pIn->GetPointClicked(P1.x, P1.y);
@@ -103,7 +103,7 @@ int main()
 	pOut->PrintMessage("Drawing a Triangle Test ==> OK,  Click anywhere to continue");
 	pIn->GetPointClicked(x,y);	//Wait for any click
 	pOut->ClearDrawArea();
-	
+
 	/// 2.4- Hexagon Test ///
 	/// =================== 
 	pOut->PrintMessage("Drawing a Hexagon, filled/non-filled and Highlighted filled/non-filled,  Click to continue");
@@ -114,7 +114,7 @@ int main()
 	pOut->PrintMessage("Drawing a Hexagon Test ==> OK,  Click anywhere to continue");
 	pIn->GetPointClicked(x,y);	//Wait for any click
 	pOut->ClearDrawArea();
-	
+
 	/// 2.5- Circle Test ///
 	/// =================== 
 	pOut->PrintMessage("Drawing an Circle, filled/non-filled and Highlighted filled/non-filled,  Click to continue");
@@ -125,14 +125,14 @@ int main()
 	pOut->PrintMessage("Drawing a Circle Test ==> OK,  Click anywhere to continue");
 	pIn->GetPointClicked(x,y);	//Wait for any click
 	pOut->ClearDrawArea();
-	
+
 	///////////////////////////////////////////////////////////////////////////////////
 	// TEST 3: 
 	//			Input Class: Read strings from the user
 	///////////////////////////////////////////////////////////////////////////////////
 	pOut->PrintMessage("TEST3: Now Time to test class Input, Click anywhere to continue");
 	pIn->GetPointClicked(x,y);	//Wait for any click
-	
+
 	pOut->PrintMessage("Testing Input ability to read strings");
 
 	///TODO: Add code here to 
@@ -150,7 +150,7 @@ int main()
 	pOut->PrintMessage("TEST4: Testing Input ability to detect User Action, click anywhere");
 
 	ActionType ActType;
-	
+
 	///TODO:  
 	//You must add a case for each action (both Draw mode and Play mode actions)
 	//Add cases for the missing actions below
@@ -161,38 +161,112 @@ int main()
 		switch (ActType)
 		{
 		case DRAW_RECT:
-				pOut->PrintMessage("Action: Draw a Rectangle , Click anywhere");
-				break;
-
+			pOut->PrintMessage("Action: Draw a Rectangle , Click anywhere");
+			break;
+		case DRAW_SQUARE:
+			pOut->PrintMessage("Action: Draw a Square , Click anywhere");
+			break;
+		case DRAW_TRI:
+			pOut->PrintMessage("Action: Draw a  Triangle, Click anywhere");
+			break;
+		case DRAW_HEX:
+			pOut->PrintMessage("Action: Draw a Hexagon , Click anywhere");
+			break;
+		case DRAW_CIRCLE:
+			pOut->PrintMessage("Action: Draw a Circle , Click anywhere");
+			break;
+		case SELECT:
+			pOut->PrintMessage("Action: Select a shape , Click anywhere");
+			break;
+		case DRW_CLR:
+			pOut->PrintMessage("Action: Choose a drawing color , Click anywhere");
+			break;
+		case FILL_CLR:
+			pOut->PrintMessage("Action: Choose a filling color , Click anywhere");
+			break;
+		case BLK:
+			pOut->PrintMessage("Action: Chose a Black filling color , Click anywhere");
+			break;
+		case YEL:
+			pOut->PrintMessage("Action: Chose a Yellow filling color , Click anywhere");
+			break;
+		case ORG:
+			pOut->PrintMessage("Action: Chose a Orange filling color , Click anywhere");
+			break;
+		case GRN:
+			pOut->PrintMessage("Action: Chose a Green filling color , Click anywhere");
+			break;
+		case RD:
+			pOut->PrintMessage("Action: Chose a Red filling color , Click anywhere");
+			break;
+		case BLU:
+			pOut->PrintMessage("Action: Chose a Blue filling color , Click anywhere");
+			break;
+		case DEL:
+			pOut->PrintMessage("Action: Selected shape deleted , Click anywhere");
+			break;
+		case MOVE:
+			pOut->PrintMessage("Action: Move the selected shape , Click anywhere");
+			break;
+		case UNDO:
+			pOut->PrintMessage("Action: Undo , Click anywhere");
+			break;
+		case REDO:
+			pOut->PrintMessage("Action: Redo , Click anywhere");
+			break;
+		case CLEAR:
+			pOut->PrintMessage("Action: Clear the drawing area , Click anywhere");
+			break;
+		case REC_PLAY:
+			pOut->PrintMessage("Action: Play the recorded operations , Click anywhere");
+			break;
+		case REC:
+			pOut->PrintMessage("Action: Start recording operations , Click anywhere");
+			break;
+		case REC_STOP:
+			pOut->PrintMessage("Action: Stop recording operations , Click anywhere");
+			break;
+		case SAVE:
+			pOut->PrintMessage("Action: Save the drawing , Click anywhere");
+			break;
+		case LOAD:
+			pOut->PrintMessage("Action: Load a drawing , Click anywhere");
+			break;
+		case TO_PLAY:
+			pOut->PrintMessage("Action: Switch to Play Mode, creating Design tool bar");
+			pOut->CreatePlayToolBar();
+			break;
+		case PICK_FIG_TYPE:
+			pOut->PrintMessage("Action: Pick with figure type , Click anywhere");
+			break;
+		case PICK_FIG_FILL:
+			pOut->PrintMessage("Action: Pick with fill color , Click anywhere");
+			break;
+		case PICK_FIG_TYPE_FILL:
+			pOut->PrintMessage("Action: Pick with figure type and fill color , Click anywhere");
+			break;
+		case TO_DRAW:
+			pOut->PrintMessage("Action: Switch to Draw Mode, creating simualtion tool bar");
+			pOut->CreateDrawToolBar();
+			break;
+		case EXIT:	
+			break;
 		case STATUS:
-				pOut->PrintMessage("Action: a click on the Status Bar, Click anywhere");
-				break;
- 
+			pOut->PrintMessage("Action: a click on the Status Bar, Click anywhere");
+			break;
+
 		case DRAWING_AREA:
-				pOut->PrintMessage("Action: a click on the Drawing Area, Click anywhere");
-				break;
+			pOut->PrintMessage("Action: a click on the Drawing Area, Click anywhere");
+			break;
 
 		case EMPTY:
-				pOut->PrintMessage("Action: a click on empty area in the Design Tool Bar, Click anywhere");
-				break;
+			pOut->PrintMessage("Action: a click on empty area in the Design Tool Bar, Click anywhere");
+			break;
 
-		case TO_DRAW:
-				pOut->PrintMessage("Action: Switch to Draw Mode, creating simualtion tool bar");
-				pOut->CreateDrawToolBar();
-				break;
+			///TODO: Add more cases for the other action types
 
-		case TO_PLAY:
-				pOut->PrintMessage("Action: Switch to Play Mode, creating Design tool bar");
-				pOut->CreatePlayToolBar();
-				break;
-
-
-		///TODO: Add more cases for the other action types
-
-
-		case EXIT:				
-				break;
 		}
+
 	}while(ActType != EXIT);
 
 
@@ -205,5 +279,4 @@ int main()
 	delete pOut;	
 	return 0;
 }
-
 

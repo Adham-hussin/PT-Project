@@ -7,9 +7,37 @@
 enum ActionType //The actions supported (you can add more if needed)
 {
 	DRAW_RECT,		//Draw Rectangle
-	EXIT,			//Exit
-	TO_DRAW,		//Switch interface to Draw mode
+	DRAW_SQUARE,
+	DRAW_TRI,
+	DRAW_HEX,
+	DRAW_CIRCLE,
+	SELECT,
+	DRW_CLR,
+	FILL_CLR,
+	BLK,
+	YEL,
+	ORG,
+	GRN,
+	RD,
+	BLU,
+	DEL,
+	MOVE,
+	UNDO,
+	REDO,
+	CLEAR,
+	REC,
+	REC_STOP,
+	REC_PLAY,
+	SAVE,
+	LOAD,
 	TO_PLAY,		//Switch interface to Play mode
+
+	PICK_FIG_TYPE,
+	PICK_FIG_FILL,
+	PICK_FIG_TYPE_FILL,
+	TO_DRAW,		//Switch interface to Draw mode		
+
+	EXIT,			//Exit
 	EMPTY,			//A click on empty place in the toolbar
 	DRAWING_AREA,	//A click on the drawing area
 	STATUS			//A click on the status bar
